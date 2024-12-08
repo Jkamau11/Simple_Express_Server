@@ -7,7 +7,7 @@ const app = express();
 const PORT = 8888;
 
 // defining the host address/server address/web address.
-const hostName = "127.0.0.1"
+const hostName = "127.6.5.4"
 
 /*
     To serve the CSS file along with your HTML, you need to explicitly tell Express to serve static files (like CSS, images, and JavaScript).
@@ -17,8 +17,8 @@ const hostName = "127.0.0.1"
 app.use(express.static('./UserData'));
 
 //using instance of express called "app" to get requests from the browser/client and return a response. message : "Hello James"
-app.get('/', (req, res)=>{
-    res.send("Hello James");
+app.get('/user', (req, res)=>{
+    res.send("Hello, I'm a supper user.");
 })
 
 //using instance of express called "app" to get requests from the browser/client and return a response. html form
@@ -27,5 +27,6 @@ app.get("/form", (req, res)=>res.sendFile(__dirname + '/UserData/index.html'));
 //telling the server which port to listen to and print a message on console. "server running ..."
 app.listen( PORT, hostName, (req, res)=>{
     console.log('Server started ...')
-    console.log(`server running on ${hostName} : ${PORT}`);
+    console.log(`server running on ${hostName} : ${PORT}`)
 })
+
