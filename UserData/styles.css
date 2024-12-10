@@ -90,3 +90,8 @@ button:hover {
         font-size: 14px;
     }
 }
+
+.stateCheck{
+    display: flex;
+    margin-top: 10px;
+}
